@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express();
+const { saveContact } = require('./controllers/contacts')
 
-router.post('/contato', (req, res) => {
-    return res.json("Testando post na rota /contato ")
-});
+router.post('/contact', saveContact);
 
 module.exports = router;
